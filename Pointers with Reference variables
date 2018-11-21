@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void fun1(int a)
+{
+	a++;
+}
+
+void fun2(int &b)
+{
+	b++;
+}
+
+void fun3(int *c)
+{
+	*c=(*c)+1;
+}
+
+void fun4(int *&d)
+{
+	*d=(*d)+1;
+}
+
+
+int main()
+{
+	int a=5;
+	fun1(a);
+	cout<<a<<endl;
+	int b=5;
+	fun2(b);
+	cout<<b<<endl;
+	
+	int *c;c=&a;
+	fun3(c);
+	cout<<(*c)<<endl;
+	int *d;d=&b;
+	fun4(d);
+	cout<<(*d)<<endl;
+}
